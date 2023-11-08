@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eis2img"
+version = "0.1.0"
+description = "Encode EIS SoC curves into RGB Gramian Angular Field images"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name = "Your Name"}]
+dependencies = [
+  "numpy",
+  "pandas",
+  "scipy",
+  "pillow",
+]
+
+[project.scripts]
+eis2img = "eis2img.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = ["eis2img", "eis2img.data", "eis2img.preprocessing", "eis2img.transforms", "eis2img.pipeline"]

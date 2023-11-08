@@ -1,0 +1,9 @@
+numpy
+pandas
+scipy
+pillow
+matplotlib
+pytest
+
+scikit-learn
+tensorflow>=2.10
