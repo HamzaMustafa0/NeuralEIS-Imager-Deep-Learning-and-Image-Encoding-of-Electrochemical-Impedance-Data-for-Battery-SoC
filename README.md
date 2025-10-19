@@ -28,15 +28,6 @@ python -m eis2img.cli encode   --folds-root /path/to/folds   --normalized-out /p
 python -m eis2img.cli encode   --folds-root /path/to/folds   --normalized-out /path/to/Normalized   --images-out /path/to/GAF_EncodedImageOutput   --n-points 100 --norm percentile --p-low 20 --p-high 80
 ```
 
-## Backdated Git commits (January 2024)
-```bash
-git init && git add .
-GIT_AUTHOR_DATE="2024-01-05 10:00:00 +0530" GIT_COMMITTER_DATE="2024-01-05 10:00:00 +0530" git commit -m "Initial: scaffold"
-
-# (optional more commits…)
-git remote add origin git@github.com:<you>/<repo>.git
-git push -u origin main
-```
 
 
 ## Train a classifier on the generated images
@@ -46,8 +37,4 @@ python -m eis2img.cli train \
   --base-dir /path/to/GAF_EncodedImageOutput/Fold1 \  --model InceptionResNetV2 \  --epochs 10 --batch-size 32 --patience 5 --frozen-layers 0
 ```
 
-Evaluate:
-```bash
-python -m eis2img.cli eval \
-  --base-dir /path/to/GAF_EncodedImageOutput/Fold1 \  --model InceptionResNetV2 \  --weights InceptionResNetV2_20cls_ft.h5
-```
+
